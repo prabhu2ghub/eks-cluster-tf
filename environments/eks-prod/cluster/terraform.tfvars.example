@@ -1,0 +1,36 @@
+aws_region      = "us-east-1"
+environment     = "prod"
+product         = "sample-app"
+cost_center     = "sample-cost-center"
+cluster_name    = "sample-eks-prod"
+eks_k8s_version = "1.30"
+
+vpc_id = "vpc-xxxxxxxx"
+
+private_subnet_ids = [
+  "subnet-private-a",
+  "subnet-private-b",
+  "subnet-private-c",
+]
+
+public_subnet_ids = [
+  "subnet-public-a",
+  "subnet-public-b",
+  "subnet-public-c",
+]
+
+external_access_cidrs = [
+  "203.0.113.10/32",
+]
+
+cluster_admin_principal_arns = [
+  "arn:aws:iam::123456789012:role/sample-eks-admin-role",
+]
+
+ami_id                   = ""
+ec2key_name              = "sample-keypair"
+node_group_instance_type = "m6a.large"
+node_group_desired_size  = 3
+node_group_max_size      = 6
+node_group_min_size      = 2
+node_group_disk_size     = 50

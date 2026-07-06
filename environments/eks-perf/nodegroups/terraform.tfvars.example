@@ -1,0 +1,30 @@
+aws_region  = "us-east-1"
+environment = "perf"
+product     = "sample-app"
+cost_center = "sample-cost-center"
+
+cluster_name        = "sample-eks-perf"
+node_group_name     = "sample-eks-perf-executor"
+node_group_iam_role = "sample-perf-eks-worker-role"
+
+private_subnet_ids = [
+  "subnet-private-a",
+  "subnet-private-b",
+  "subnet-private-c",
+]
+
+ami_id                   = ""
+ec2key_name              = "sample-keypair"
+node_group_instance_type = "m6a.large"
+node_group_desired_size  = 2
+node_group_max_size      = 6
+node_group_min_size      = 2
+node_group_disk_size     = 100
+node_group_count         = 1
+force_update_version     = true
+
+node_taints = [{
+  key    = "workload"
+  value  = "executor"
+  effect = "NO_SCHEDULE"
+}]
