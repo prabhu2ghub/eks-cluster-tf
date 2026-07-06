@@ -3,7 +3,7 @@ environment     = "perf"
 product         = "sample-app"
 cost_center     = "sample-cost-center"
 cluster_name    = "sample-eks-perf"
-eks_k8s_version = "1.30"
+eks_k8s_version = "1.34"
 
 vpc_id = "vpc-xxxxxxxx"
 

@@ -1,7 +1,7 @@
 variable "eks_k8s_version" {
   type        = string
   description = "Version of k8s to use in EKS"
-  default     = "1.28"
+  default     = "1.34"
 }
 
 variable "name" {
